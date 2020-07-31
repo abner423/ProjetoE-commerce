@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+  </head>
+  <body class="container bg-white" background="./images/herringbone.png">
+    <!-- Modal Termos -->
+    <div class="modal fade" id="modalTermos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Termos de uso</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Ao contratar determinado produto, qualquer tipo de problema deve ser resolvido com o responsável do produto
+              cadastrado, o site é apenas um intermediador</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Login:</label>
+                <input type="email" class="form-control" id="user" required>
+              </div>
+              <div class="form-group">
+                <label for="password" class="col-form-label">Senha:</label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Whatsapp fixed -->
+    <div class="wzap-fixed-chat">
+      <a href="https://web.whatsapp.com/" target="_blank"><img src="./images/whatsapp.png" alt="Whatsapp chat"></a>
+    </div>
+    <!-- Header -->
+    <header>
+      <div class="navContainerEdit mt-0">
+        <nav class="navbar navbar-expand-lg nnavbar navbar-dark bg-dark">
+          <a class="navbar-brand h1 mb-0" href="index.html">app Rentals</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contatos.html">Contatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" href="#modalLogin">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+              </li>
+            </ul>
+            <form class="form-inline ml-auto">
+              <input class="form-control" type="search" placeholder="buscar">
+              <button class="btn btn-dark" type="submit">Ok</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <br>
+    <h1>Cadastre-se</h1>
+    <br>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Nome:</label>
+          <input type="text" class="form-control" id="name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastname">Sobrenome:</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Digite seu sobrenome" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mail">E-mail:</label>
+        <input type="email" class="form-control" id="mail" placeholder="Digite seu email" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="address">Endereço:</label>
+          <input type="text" class="form-control" id="address" placeholder="Digite seu endereço" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="number">Número:</label>
+          <input type="text" class="form-control" id="number" placeholder="Nº" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="add-details">Complemento:</label>
+          <input type="text" class="form-control" id="add-details" placeholder="Apt...">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="city">Cidade:</label>
+          <input type="text" class="form-control" id="city" placeholder="Digite a cidade" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="state">Estado:</label>
+          <input type="text" class="form-control" id="state" placeholder="Estado" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="zip">CEP:</label>
+          <input type="text" class="form-control" id="zip" placeholder="CEP" required>
+        </div>
+      </div>
+      <button type="reset" class="btn btn-dark">Limpar</button>
+      <button type="submit" class="btn btn-dark">Cadastrar</button>
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalTermos">Ver termos</button>
+      <br><br>
+    </form>
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <h4 class="h6">PÁGINAS</h4>
+            <ul class="list-unstyled">
+              <li><a href="produtos.html">Produtos</a></li>
+              <li><a href="contatos.html">Contatos</a></li>
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <h4 class="h6">Produtos mais contratados</h4>
+            <ul class="list-unstyled">
+              <li><a href="produtos.html">Roupas</a></li>
+              <li><a href="produtos.html">Ferramentas</a></li>
+              <li><a href="produtos.html">Eletromésticos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="h6">DADOS DE CONTATOS</h4>
+            <ul class="list-unstyled text-secondary">
+              <li>info@aaprentals.com</li>
+              <li>11 9999-9999</li>
+              <li>De Seg. à Sex. das 8h às 18h</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4 class="h6">REDES SOCIAIS</h4>
+            <ul class="list-unstyled">
+              <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="http://www.facebook.com" target="_blank"
+                  style="max-width: 140px">Facebook</a></li>
+              <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="http://www.twitter.com" target="_blank"
+                  style="max-width: 140px">Twitter</a></li>
+              <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="http://www.instagram.com" target="_blank"
+                  style="max-width: 140px">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark text-center py-3">
+        <p class="mb-0">AAP Rentals 2020. Direitos reservados.</p>
+      </div>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
